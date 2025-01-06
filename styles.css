@@ -1,3 +1,4 @@
+/* 고정 헤더 스타일 */
 .fixed-header {
     position: fixed;
     top: 0;
@@ -7,8 +8,75 @@
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000; /* 다른 요소들 위에 표시 */
 }
 
+/* 기본 스타일 */
 body {
-    margin-top: 100px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-top: 100px; /* 고정 헤더 높이만큼 여백 추가 */
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.link-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.info-content h2 {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.info-content p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
 }
