@@ -25,7 +25,7 @@ body {
 /* 자기소개 카드 스타일 */
 .intro-card {
     position: relative;
-    height: 100%;
+    height: 400px;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -37,7 +37,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
+    object-fit: contain;
     background-image: url('/image/computer.jpg');
     background-size: cover;
     background-position: center;
@@ -165,6 +166,12 @@ body {
 
 .gallery-container .image-item img:hover {
     transform: scale(1.05);
+}
+
+.skill-image.wide {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
 }
 
 /* 프로젝트 카드 스타일 */
